@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: samplenode
+  name: samplenode
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: samplenode
+  template:
+    metadata:
+      labels:
+        run: samplenode
+    spec:
+      containers:
+      - image: gcr.io/green-syntax-254812/samplenode:latest
+        name: samplenode
+        ports:
+        - containerPort: 3000
