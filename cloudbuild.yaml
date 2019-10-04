@@ -36,6 +36,6 @@ steps:
   - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
 # push images to Google Container Registry with tag
 images: [
-   'gcr.io/$PROJECT_ID/samplenode:$TAG_NAME',
-   'gcr.io/$PROJECT_ID/samplenode:latest'
+   'gcr.io/$PROJECT_ID/samplenodeX:$TAG_NAME',
+   'gcr.io/$PROJECT_ID/samplenodeX:latest'
   ]
