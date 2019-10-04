@@ -14,10 +14,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/sum', (req, res) => {
-    var x = parseInt(req.query.x);
-    var y = parseInt(req.query.y);
-    res.send((x+y).toString());
-  });
+  var x = parseInt(req.query.x);
+  var y = parseInt(req.query.y);
+  res.send((x+y).toString());
+});
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
