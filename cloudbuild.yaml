@@ -7,7 +7,7 @@ steps:
    'docker pull gcr.io/$PROJECT_ID/samplenode:latest || exit 0'
   ]
 #step 2
-#execute in command `gcloud config set container/use_client_certificate True` to prevent step to from failing
+#execute in command `gcloud config set container/use_client_certificate True` to prevent step to from failing 
 - name: gcr.io/cloud-builders/docker
   args: [
    'build', 
