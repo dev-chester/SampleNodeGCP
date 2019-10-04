@@ -11,7 +11,7 @@ steps:
   args: [
    'build', 
    '-t', 
-   'gcr.io/$PROJECT_ID/samplenode:$TAG_NAME',
+   'gcr.io/$PROJECT_ID/samplenode',
    '-t', 
    'gcr.io/$PROJECT_ID/samplenode:latest',
    '.'
@@ -29,7 +29,7 @@ steps:
    'image', 
    'deployment', 
    'samplenode', 
-   'samplenode=gcr.io/$PROJECT_ID/samplenode:$TAG_NAME'
+   'samplenode=gcr.io/$PROJECT_ID/samplenode'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
