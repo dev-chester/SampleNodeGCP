@@ -15,5 +15,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+#run the mocha tests
+RUN npm test
+
 EXPOSE 3000
-CMD [ "node", "app.js" ]
+CMD [ "npm", "start" ]

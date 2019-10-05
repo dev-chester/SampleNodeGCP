@@ -10,7 +10,7 @@ const HOST = '0.0.0.0';
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello world\n');
+  res.send('Hello world');
 });
 
 app.get('/sum', (req, res) => {
@@ -19,5 +19,7 @@ app.get('/sum', (req, res) => {
   res.send((x+y).toString());
 });
 
-app.listen(PORT, HOST);
+var server = app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
+
+module.exports = server; //export for the tests to read
